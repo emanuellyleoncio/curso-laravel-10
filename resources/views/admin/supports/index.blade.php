@@ -1,5 +1,5 @@
 <h1>Listagem dos Suportes</h1>
-
+<a href="{{route('supports.create')}}">Criar dúvida</a>
 
 <table>
     <thead>
@@ -11,10 +11,12 @@
 
     <tbody>
         @foreach($supports as $support)
-            <tr><td>{{ $support->subject }}</td></tr>
-            <tr><td>{{ $support->status }}</td></tr>
-            <tr><td>{{ $support->body }}</td></tr>
-            <tr><td>></td></tr>
+            <tr>
+                <td>{{ $support->subject }}</td>
+                <td>{{ $support->status }}</td>
+                <td>{{ $support->body }}</td>
+                <td>></td>
+            </tr>
         @endforeach
     </tbody>
 </table>
